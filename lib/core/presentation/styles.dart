@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/// Main styles of the texts in while application
 class AppTextStyle {
   static final TextStyle regular = TextStyle(
     fontWeight: FontWeight.w400,

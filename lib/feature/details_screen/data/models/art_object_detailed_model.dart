@@ -4,6 +4,9 @@ import 'package:yerke_test_app/feature/details_screen/domain/entities/art_object
 import 'package:yerke_test_app/feature/main_screen/data/models/art_image_model.dart';
 import 'package:yerke_test_app/feature/main_screen/data/models/art_links_model.dart';
 
+/// Model of the [ArtObjectDetailed] entity  
+/// decodes JSON and returns [ArtObjectDetailed] via factory 
+/// also encodes [ArtObjectDetailed] into JSON
 class ArtObjectDetailedModel extends ArtObjectDetailed {
   final ArtLinksModel links;
   final String objectNumber;

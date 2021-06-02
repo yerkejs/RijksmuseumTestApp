@@ -2,6 +2,7 @@ import 'package:equatable/equatable.dart';
 import 'package:yerke_test_app/feature/main_screen/domain/entities/art_image.dart';
 import 'package:yerke_test_app/feature/main_screen/domain/entities/art_links.dart';
 
+/// Entity [ArtObject] holds minimum information about the art objects 
 class ArtObject extends Equatable {
   final String id;
   final String objectNumber;

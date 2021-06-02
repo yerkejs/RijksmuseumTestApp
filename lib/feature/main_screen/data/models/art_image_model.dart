@@ -1,5 +1,7 @@
 import 'package:yerke_test_app/feature/main_screen/domain/entities/art_image.dart';
 
+/// Model of the [ArtImage]
+/// Used to decode [ArtImage] and encode it to the JSON format
 class ArtImageModel extends ArtImage {
   final String guid; 
   final num offsetPercentageX;

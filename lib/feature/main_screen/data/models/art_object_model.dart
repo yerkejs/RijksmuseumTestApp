@@ -2,6 +2,8 @@ import 'package:yerke_test_app/feature/main_screen/data/models/art_image_model.d
 import 'package:yerke_test_app/feature/main_screen/data/models/art_links_model.dart';
 import 'package:yerke_test_app/feature/main_screen/domain/entities/art_object.dart';
 
+/// Model of the [ArtObject]
+/// Used to decode [ArtObject] and encode it to the JSON format
 class ArtObjectModel extends ArtObject {
   final String id;
   final String objectNumber;

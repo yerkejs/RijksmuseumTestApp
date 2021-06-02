@@ -1,5 +1,6 @@
 import 'package:equatable/equatable.dart';
 
+/// Contains main information about the art image 
 class ArtImage extends Equatable {
   final String guid; 
   final num offsetPercentageX;

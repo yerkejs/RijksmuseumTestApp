@@ -30,7 +30,7 @@ class DetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Theme.of(context).backgroundColor,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         title: Text("Art object"),
@@ -113,6 +113,6 @@ class DetailScreen extends StatelessWidget {
 
   /// Retursn Divider widget of grey color
   Widget _buildDivider (BuildContext context) => Divider(
-    color: Colors.grey,
+    color: Theme.of(context).dividerColor,
   );
 }

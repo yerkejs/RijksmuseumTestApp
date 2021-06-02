@@ -1,5 +1,6 @@
 import 'package:equatable/equatable.dart';
 
+/// Entity, holds information about the colors of the art objects
 class ArtColor extends Equatable {
   final num percentage;
   final String colorHex;

@@ -1,5 +1,6 @@
 import 'package:equatable/equatable.dart';
 
+/// Entity of the person
 class Person extends Equatable {
   final String name;
   final List<String> occupations;
