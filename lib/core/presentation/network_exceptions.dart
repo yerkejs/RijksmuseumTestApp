@@ -1,6 +1,8 @@
 import 'package:yerke_test_app/core/api/exceptions.dart';
 
+/// Presentation extension of the app exceptions
 extension AppExceptionsUIExtension on AppExceptions {
+  /// Gives title to each type of the [AppExceptions]
   String get name {
     switch (this) {
       case AppExceptions.notImplemented:

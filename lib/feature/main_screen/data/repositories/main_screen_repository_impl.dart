@@ -5,6 +5,7 @@ import 'package:dartz/dartz.dart';
 import 'package:yerke_test_app/feature/main_screen/domain/repository/main_screen_repository.dart';
 
 class MainScreenRepositoryImpl extends MainScreenRepository {
+  /// MARK: - Remote datasource for sending APIs requests 
   late final MainScreenRemoteDatasource _mainScreenRemoteDatasource;
 
   MainScreenRepositoryImpl({

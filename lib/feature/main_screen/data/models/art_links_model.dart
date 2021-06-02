@@ -1,5 +1,7 @@
 import 'package:yerke_test_app/feature/main_screen/domain/entities/art_links.dart';
 
+/// Model of the [ArtLinks]
+/// Used to encode and decode it
 class ArtLinksModel extends ArtLinks {
   final String? web;
   final String? self;

@@ -12,7 +12,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primaryColor: Colors.black,
+        errorColor: Colors.red,
+        backgroundColor: Colors.black,
+        focusColor: Colors.blue,
+        buttonColor: Colors.blue[50],
+        highlightColor: Colors.blue,
+        dividerColor: Colors.grey
       ),
       home: MainScreen(),
     );

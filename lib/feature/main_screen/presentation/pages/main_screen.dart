@@ -43,10 +43,10 @@ class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Theme.of(context).backgroundColor,
       appBar: AppBar(
         title: Text("Main"),
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.transparent,
       ),
       body: SafeArea(
         child: BlocProvider<MainCubit>(

@@ -1,13 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:yerke_test_app/core/presentation/styles.dart';
 
+/// Reusable button which can be used in any place of this application 
 class AppMainButton extends StatelessWidget {
-  
+  /// Title of the button 
   final String title;
+  
+  /// Widget which will be located at left side of the title 
   final Widget? leadingView;
+  
+  /// Widget which will be located at the right side of the title
   final Widget? trailingView;
+  
+  /// Callback function, will be called when user taps on the button 
   final Function? onPress;
 
+
+  /// MARK: - Constructor
   const AppMainButton({ 
     required this.title,
     this.onPress,
@@ -16,7 +25,7 @@ class AppMainButton extends StatelessWidget {
     Key? key
    }) : super(key: key);
 
-
+  /// MARK: - UI Helper
   @override
   Widget build(BuildContext context) {
     return InkWell(
@@ -25,7 +34,7 @@ class AppMainButton extends StatelessWidget {
       },
       child: Container(
         decoration: BoxDecoration(
-          color: Colors.blue[50],
+          color: Theme.of(context).buttonColor,
           borderRadius: BorderRadius.circular(8)
         ),
         padding: const EdgeInsets.symmetric(
@@ -45,7 +54,7 @@ class AppMainButton extends StatelessWidget {
               Text (
                 title,
                 style: AppTextStyle.regular.copyWith(
-                  color: Colors.blue,
+                  color: Theme.of(context).highlightColor,
                   fontSize: 16
                 ),
               ),

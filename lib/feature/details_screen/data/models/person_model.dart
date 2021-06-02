@@ -1,5 +1,8 @@
 import 'package:yerke_test_app/feature/details_screen/domain/entities/person.dart';
 
+/// Model of the [Person]
+/// Converts json into the [Person] entity
+/// also encodes entity into the json
 class PersonModel extends Person {
   final String name;
   final List<String> occupations;

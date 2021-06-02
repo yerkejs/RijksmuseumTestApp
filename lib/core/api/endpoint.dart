@@ -1,9 +1,14 @@
+/// Config file for all the server endpoints 
 enum Endpoints {
+  /// Endpoint for retriving list of the art objects from the backend
   fetchArtObjects,
+  /// Endpoint for getting detailed information about one object by it's specific id
   fetchArtObjectDetails
 }
 
 extension EndpointsExtension on Endpoints {
+  /// Returns path of the request 
+  /// [List<String> params] - contains parameters which are used in path 
   String getPath ([List<String> params = const <String>[]]) {
     switch (this) {
       case Endpoints.fetchArtObjects:
