@@ -4,8 +4,8 @@ import 'package:yerke_test_app/core/utils/string_extension.dart';
 
 class DetailsMoreWidget extends StatelessWidget {
 
-  final String title;
-  final List<String> items; 
+  final String? title;
+  final List<String>? items; 
 
   const DetailsMoreWidget({ 
     required this.title,
@@ -25,7 +25,7 @@ class DetailsMoreWidget extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           Text(
-            title,
+            title ?? "",
             style: AppTextStyle.medium.copyWith(
               color: Colors.white,
               fontSize: 18
@@ -33,7 +33,7 @@ class DetailsMoreWidget extends StatelessWidget {
           ),
           const SizedBox(height: 4),
           
-          if (items.length == 0)
+          if ((items ?? []).length == 0)
             Container(
               padding: const EdgeInsets.only(top: 12),
               child: Text(
@@ -45,7 +45,7 @@ class DetailsMoreWidget extends StatelessWidget {
               ),
             ),
           Wrap(
-            children: items.map<Widget>(
+            children: (items ?? []).map<Widget>(
               (item) => Container(
                 margin: EdgeInsets.only(right: 4),
                 child: Chip(

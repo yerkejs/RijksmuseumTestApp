@@ -30,7 +30,6 @@ class DetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Theme.of(context).backgroundColor,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         title: Text("Art object"),
@@ -72,12 +71,12 @@ class DetailScreen extends StatelessWidget {
                       ),
                       DetailsMoreWidget(
                         title: "Type",
-                        items: state.artObjectDetailed?.objectTypes ?? []
+                        items: state.artObjectDetailed?.objectTypes 
                       ),
                       _buildDivider(context),
                       DetailsMoreWidget(
                         title: "Collection",
-                        items: state.artObjectDetailed?.objectCollection ?? []
+                        items: state.artObjectDetailed?.objectCollection 
                       ),
                       _buildDivider(context),
                       DetailsMoreWidget(
@@ -89,12 +88,12 @@ class DetailScreen extends StatelessWidget {
                       _buildDivider(context),
                       DetailsMoreWidget(
                         title: "Materials",
-                        items: state.artObjectDetailed?.materials ?? []
+                        items: state.artObjectDetailed?.materials
                       ),
                       _buildDivider(context),
                       DetailsMoreWidget(
                         title: "Historical people",
-                        items: state.artObjectDetailed?.historicalPersons ?? []
+                        items: state.artObjectDetailed?.historicalPersons 
                       ),
                       _buildDivider(context),
                       DetailsFooter(
