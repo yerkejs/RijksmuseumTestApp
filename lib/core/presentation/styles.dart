@@ -27,3 +27,17 @@ class AppTextStyle {
     fontSize: 18
   );
 }
+
+/// Main Theme of the application
+abstract class AppTheme {
+  static final ThemeData lightTheme = ThemeData(
+    primaryColor: Colors.black,
+    errorColor: Colors.red,
+    backgroundColor: Colors.black,
+    scaffoldBackgroundColor: Colors.black,
+    focusColor: Colors.blue,
+    buttonColor: Colors.blue[50],
+    highlightColor: Colors.blue,
+    dividerColor: Colors.grey
+  );
+}

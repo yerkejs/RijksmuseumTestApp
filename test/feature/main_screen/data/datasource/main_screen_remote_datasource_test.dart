@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:dio/dio.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:http_mock_adapter/http_mock_adapter.dart';
@@ -10,7 +12,10 @@ import 'package:yerke_test_app/feature/main_screen/data/models/art_object_model.
 import '../../../../fixtures/fixture_reader.dart';
 import '../../../../shared/test_config.dart';
 
-const Map<String, dynamic> defaultQueryParams = { 'p': 0, 'ps': 10 };
+final Map<String, dynamic> defaultQueryParams = { 
+  'p': '1', 
+  'ps': '10', 
+};
 
 void main () {
   late MainScreenRemoteDatasourceImpl mainScreenRemoteDatasourceImpl;
@@ -66,17 +71,16 @@ void main () {
       dioAdapter..onGet(
         '/api/nl/collection', 
         (request) { 
-          return request.reply(200, fixture(FixtureTypes.artObjectsResponse.name));
+          return request.reply(200, json.decode(fixture(FixtureTypes.artObjectsResponse.name)));
         },
-        queryParameters: defaultQueryParams
+        queryParameters: defaultQueryParams,
       );
       
       // Act 
-      final result = await mainScreenRemoteDatasourceImpl
-        .fetchArtObjects();
+      final result = await mainScreenRemoteDatasourceImpl.fetchArtObjects();
 
       // Assert 
-      expect(expectedResponseModel, result);
+      expect(result, expectedResponseModel);
     });
 
 

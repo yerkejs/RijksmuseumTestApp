@@ -1,4 +1,3 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:yerke_test_app/core/api/exceptions.dart';
 import 'package:dartz/dartz.dart';
 import 'package:yerke_test_app/core/domain/usecase/usecase_base.dart';
